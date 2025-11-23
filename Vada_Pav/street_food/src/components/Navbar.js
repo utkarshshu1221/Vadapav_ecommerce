@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 z-50 w-full">
       <div className="backdrop-blur-md bg-black/40">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <nav className="mx-auto flex items-center justify-between px-4 py-3">
           {/* Left: Logo + Brand */}
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollTo("top")}>
             <Image
@@ -113,7 +113,7 @@ export default function Navbar() {
                   onClick={() => scrollTo("visit")}
                   className="mt-2 w-full rounded-md bg-red-600 px-3 py-2 text-sm font-semibold shadow-sm hover:bg-red-700 transition-colors"
                 >
-                  Order Online
+                  Visit Us
                 </motion.button>
               </div>
             </motion.div>

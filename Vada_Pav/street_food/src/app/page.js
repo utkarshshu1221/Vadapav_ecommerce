@@ -5,8 +5,10 @@ import Hero from "@/components/Hero";
 import MenuPage from "@/components/menu";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Testimonials from "@/components/Testimonials";
-import InstagramFeed from "@/components/InstagramFeed";
+import TestimonialsSection from "@/components/Testimonials";
+import testimonials from"@/schemas/testimonials"
+import SocialFeed from "@/components/SocialFeed";
+import feedItems from "@/schemas/feedItems";
 import Footer from "@/components/Footer";
 
 export default async function Page() {
@@ -14,9 +16,9 @@ export default async function Page() {
     _id, name, price, "imageUrl": image.asset->url, tags
   }`);
 
-  const testimonials = await client.fetch(`*[_type == "testimonial"]{
-    author, text, rating, "imageUrl": image.asset->url
-  }`);
+  // const testimonials = await client.fetch(`*[_type == "testimonial"]{
+  //   author, text, rating, "imageUrl": image.asset->url
+  // }`);
 
   const posts = await client.fetch(`*[_type == "instagramPost"] | order(postedAt desc)[0...8]{
     caption, url, "imageUrl": image.asset->url
@@ -28,9 +30,9 @@ export default async function Page() {
       <Hero />
       <MenuPage />
       <About />
+      <TestimonialsSection testimonials={testimonials} />
+      <SocialFeed items={feedItems} />
       <Contact />
-      <Testimonials testimonials={testimonials} />
-      <InstagramFeed posts={posts} />
       <Footer />
     </main>
   );

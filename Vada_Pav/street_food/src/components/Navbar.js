@@ -39,7 +39,7 @@ export default function Navbar() {
               className="rounded-md"
               priority
             />
-            <span className="font-bold tracking-wide">
+            <span className="font-bold text-white tracking-wide">
               Hare Krishna Bada Pav
             </span>
           </div>

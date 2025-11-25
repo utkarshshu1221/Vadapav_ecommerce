@@ -11,7 +11,7 @@ const menuItems = [
     imageUrl: "/Burger.jpg",
     name: "Burger",
     price: 200,
-    description: "Juicy beef burger with fresh toppings"
+    description: "Viggies"
   },
   {
     _id: "3",
